@@ -135,6 +135,37 @@ section.blk.alt{background:var(--bg2)}
 .pair figure{text-align:center}
 .pair figcaption{font-size:13px;color:var(--mut);margin-top:12px}
 
+/* 직업 상세 */
+.herobar{display:flex;gap:18px;align-items:center;max-width:860px;margin:0 auto 28px;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:12px;padding:16px 20px}
+.herobar .sp{flex:0 0 72px;height:96px;display:flex;align-items:flex-end;justify-content:center}
+.herobar .sp img{image-rendering:pixelated;max-height:92px}
+.herobar h4{font-family:'Galmuri11';font-weight:700;color:var(--gold);font-size:17px}
+.herobar p{font-size:14px;color:#d9d0e4;margin-top:4px;word-break:keep-all}
+.herobar b{color:var(--gold)}
+.classes3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cc{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--c);border-radius:12px;padding:18px 18px 20px}
+.cc header{display:flex;gap:14px;align-items:flex-end;margin-bottom:6px}
+.cc header .sp{flex:0 0 84px;height:110px;display:flex;align-items:flex-end;justify-content:center;background:radial-gradient(50% 14% at 50% 94%,rgba(0,0,0,.45),transparent 70%)}
+.cc header .sp img{image-rendering:pixelated;max-height:106px}
+.cc h4{font-family:'Galmuri11';font-weight:700;font-size:20px;color:var(--c)}
+.cc .role{font-size:13px;color:var(--mut)}
+.cc .chip{display:inline-block;margin-top:6px;font-family:'Galmuri11';font-size:12px;padding:2px 8px;border-radius:4px;border:1px solid var(--c);color:var(--c)}
+.cc h5{font-family:'Galmuri11';font-size:13px;color:var(--gold);margin:14px 0 6px;letter-spacing:.05em}
+.cc h5.m{color:#d6b2ff}
+.cc ul.dot{list-style:none}
+.cc ul.dot li{position:relative;padding-left:14px;font-size:14px;color:#d9d0e4;margin-top:3px;word-break:keep-all}
+.cc ul.dot li::before{content:"";position:absolute;left:2px;top:.6em;width:6px;height:6px;background:var(--c)}
+.cc dl{display:grid;grid-template-columns:auto 1fr;gap:5px 10px;font-size:13.5px}
+.cc dt{font-family:'Galmuri11';font-weight:700;color:var(--ink);white-space:nowrap;padding:1px 7px;background:var(--panel2);border-radius:4px;align-self:start}
+.cc dl.m dt{background:#2c1f3c;color:#d6b2ff}
+.cc dd{color:#cfc5db;word-break:keep-all;line-height:1.5}
+.note{max-width:860px;margin:22px auto 0;text-align:center;font-size:14px;color:var(--mut);word-break:keep-all}
+h3.grp{font-family:'Galmuri11';font-weight:700;font-size:19px;margin:44px 0 0;display:flex;align-items:center;gap:10px}
+h3.grp:first-of-type{margin-top:0}
+h3.grp i{width:12px;height:12px;background:var(--c);box-shadow:2px 2px 0 rgba(0,0,0,.5)}
+#contents .tiles{margin-top:16px}
+#contents .pair{margin:18px 0 0}
+
 /* 콘텐츠 타일 */
 .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
 .tile{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
@@ -171,6 +202,8 @@ footer .cp{margin-left:auto}
  .feat{grid-template-columns:1fr;gap:28px;text-align:left}
  .feat.rev .txt{order:0}
  .classes{grid-template-columns:repeat(2,1fr)}
+ .classes3{grid-template-columns:1fr;max-width:520px;margin:0 auto}
+ .herobar{flex-direction:column;text-align:center}
  .legends{grid-template-columns:repeat(2,1fr)}
  .chips{justify-content:center}
  .tiles{grid-template-columns:repeat(2,1fr)}
@@ -276,54 +309,105 @@ y.addEventListener('click',go);y.addEventListener('keydown',function(e){if(e.key
 </div></section>
 
 <section class="blk" id="classes"><div class="wrap">
- <div class="head"><div class="tag">CLASS</div><h2>변신 주문서 한 장으로 다른 영웅이 된다</h2><p>직업마다 스킬이 다르고, 전설 무기와 짝을 이루는 특수 스킬이 있습니다.</p></div>
- <div class="classes">
-  <div class="cls" style="--c:#e8b84b">
-   <div class="sp"><img src="img/hero1.png" alt="용사"></div>
-   <h4>용사</h4><div class="role">길치지만 끝까지 간다</div>
-   <div class="sk"><span>세 직업 스킬 절반</span></div>
-  </div>
-  <div class="cls" style="--c:#b06bff">
-   <div class="sp"><img src="img/mage1.png" alt="마법사"></div>
-   <h4>마법사</h4><div class="role">피하고 깎아 내는 마법</div>
-   <div class="sk"><span>잔상</span><span>마력장막</span><span>부식</span><span>동기화</span></div>
-   <div class="sk"><span class="m">공허잠식</span><span class="m">공허균열</span><span class="m">공허개시</span></div>
-   <div class="wpn">특수 무기 · 공허의 낫</div>
-  </div>
-  <div class="cls" style="--c:#6fc3ff">
-   <div class="sp"><img src="img/paladin1.png" alt="팔라딘"></div>
-   <h4>팔라딘</h4><div class="role">버티고 되돌려 주는 방패</div>
-   <div class="sk"><span>불굴</span><span>성역</span><span>충격파</span><span>동기화</span></div>
-   <div class="sk"><span class="m">영도결계</span><span class="m">영도역류</span><span class="m">영도파쇄</span></div>
-   <div class="wpn">특수 무기 · 절대영도</div>
-  </div>
-  <div class="cls" style="--c:#7fd08a">
-   <div class="sp"><img src="img/rogue1.png" alt="도적"></div>
-   <h4>도적</h4><div class="role">한 방을 노리는 그림자</div>
-   <div class="sk"><span>암살</span><span>둔갑술</span><span>보물찾기</span><span>동기화</span></div>
-   <div class="sk"><span class="m">뇌신잔영</span><span class="m">뇌신섬격</span><span class="m">뇌신잠영술</span></div>
-   <div class="wpn">특수 무기 · 뇌신의 권능</div>
-  </div>
+ <div class="head"><div class="tag">CLASS</div><h2>변신 주문서 한 장으로 다른 영웅이 된다</h2><p>마법상점에서 변신 주문서를 사서 출격 화면에서 켜면 그 판 하나만 그 직업으로 싸웁니다.</p></div>
+
+ <div class="herobar">
+  <div class="sp"><img src="img/hero1.png" alt="용사"></div>
+  <div><h4>용사 — 길치지만 끝까지 간다</h4>
+  <p>기본 영웅입니다. 변신하지 않은 판에도 마법사·팔라딘·도적 스킬이 <b>절반</b>씩 함께 적용되고, 변신하면 그 직업 스킬이 <b>100%</b>로 적용됩니다. 스킬 포인트는 세 직업이 같이 씁니다.</p></div>
  </div>
+
+ <div class="classes3">
+  <article class="cc" style="--c:#b06bff">
+   <header><div class="sp"><img src="img/mage1.png" alt="마법사"></div><div><h4>마법사</h4><div class="role">피하고 깎아 내는 마법</div><span class="chip">특수 무기 · 공허의 낫</span></div></header>
+   <h5>변신하면</h5>
+   <ul class="dot"><li>이동이 용사의 두 배로 빠르다</li><li>한 번 휘두르면 사거리 안 몬스터가 전부 맞는다</li></ul>
+   <h5>기본 스킬</h5>
+   <dl><dt>잔상</dt><dd>받는 모든 피해를 최대 25% 확률로 피한다</dd>
+   <dt>마력장막</dt><dd>받는 피해를 최대 40% 흡수, 가시는 2배 흡수</dd>
+   <dt>부식</dt><dd>타격마다 최대 30% 확률로 적 최대 체력 1.5% 삭제</dd>
+   <dt>동기화</dt><dd>변신 주문서가 최대 50% 확률로 소모되지 않는다</dd></dl>
+   <h5 class="m">특수 스킬 · 공허의 낫을 들면</h5>
+   <dl class="m"><dt>공허잠식</dt><dd>시간정지된 적을 때릴 때마다 그 적의 공격력이 줄어든다</dd>
+   <dt>공허균열</dt><dd>시간정지된 적에게 치명타 시 최대 체력을 더 깎는다</dd>
+   <dt>공허개시</dt><dd>적에게 첫 타를 칠 때 시간정지 확률이 오른다</dd></dl>
+  </article>
+  <article class="cc" style="--c:#6fc3ff">
+   <header><div class="sp"><img src="img/paladin1.png" alt="팔라딘"></div><div><h4>팔라딘</h4><div class="role">버티고 되돌려 주는 방패</div><span class="chip">특수 무기 · 절대영도</span></div></header>
+   <h5>변신하면</h5>
+   <ul class="dot"><li>체력이 크게 늘어난다</li><li>부활하면 잠시 무적이 된다</li><li>망치질이 앞·뒤·좌·우 십자로 함께 친다</li></ul>
+   <h5>기본 스킬</h5>
+   <dl><dt>불굴</dt><dd>최대 체력이 최대 240% 늘어난다</dd>
+   <dt>성역</dt><dd>부활 시 성역이 발동해 최대 8턴간 무적</dd>
+   <dt>충격파</dt><dd>망치질이 십자로 최대 24칸을 함께 때리고 벽을 부순다</dd>
+   <dt>동기화</dt><dd>변신 주문서가 최대 50% 확률로 소모되지 않는다</dd></dl>
+   <h5 class="m">특수 스킬 · 절대영도를 들면</h5>
+   <dl class="m"><dt>영도결계</dt><dd>최대 체력이 늘어난다</dd>
+   <dt>영도역류</dt><dd>몬스터를 칠 때 가시 피해가 붙고, 반사할수록 쌓인다</dd>
+   <dt>영도파쇄</dt><dd>얼음 가시 발동, 부하를 얼린 뒤 다음 타격에 터트린다</dd></dl>
+  </article>
+  <article class="cc" style="--c:#7fd08a">
+   <header><div class="sp"><img src="img/rogue1.png" alt="도적"></div><div><h4>도적</h4><div class="role">한 방을 노리는 그림자</div><span class="chip">특수 무기 · 뇌신의 권능</span></div></header>
+   <h5>변신하면</h5>
+   <ul class="dot"><li>받는 공격을 20% 확률로 피한다</li><li>판 시작 때 소모품을 찾아낸다</li><li>치명타가 적 체력을 크게 도려낸다</li><li>위기에 한 번 몸을 숨겨 빠져나간다</li></ul>
+   <h5>기본 스킬</h5>
+   <dl><dt>보물찾기</dt><dd>판 시작 때 소모품을 찾고, 보스 보상을 한 번 더 받는다</dd>
+   <dt>암살</dt><dd>치명타가 적의 남은 체력을 크게 도려낸다</dd>
+   <dt>둔갑술</dt><dd>체력 20% 이하에서 전투를 끊고 숨어 회복한다 (판당 1회)</dd>
+   <dt>동기화</dt><dd>변신 주문서가 최대 50% 확률로 소모되지 않는다</dd></dl>
+   <h5 class="m">특수 스킬 · 뇌신의 권능을 들면</h5>
+   <dl class="m"><dt>뇌신잔영</dt><dd>모든 피해를 확률로 흘려 일부만 받는다</dd>
+   <dt>뇌신섬격</dt><dd>슈퍼 치명 시 적 최대 체력을 깎는다</dd>
+   <dt>뇌신잠영술</dt><dd>몬스터를 잡을 때마다 순간이동, 다섯 번째는 보스 옆으로</dd></dl>
+  </article>
+ </div>
+ <p class="note">특수 스킬은 그 직업의 전설 무기를 들었을 때 발동하고, 무기 강화가 높을수록 세집니다(+50강 최대). 배우는 데는 무한 151층부터 쌓이는 연구비를 씁니다 — 마법상점 [마법연구].</p>
  <div class="pair">
-  <figure><div class="phone sm"><img src="img/special.webp" alt="특수 스킬 화면"></div><figcaption>마법상점 · 직업 탭 [특수]</figcaption></figure>
-  <figure><div class="phone sm"><img src="img/lab.webp" alt="마법연구 화면"></div><figcaption>마법상점 · [마법연구] — 무한 151층부터 왕국 지원비</figcaption></figure>
+  <figure><div class="phone sm"><img src="img/special.webp" alt="특수 스킬 화면" loading="lazy"></div><figcaption>마법상점 · 직업 탭 [특수]</figcaption></figure>
+  <figure><div class="phone sm"><img src="img/lab.webp" alt="마법연구 화면" loading="lazy"></div><figcaption>마법상점 · [마법연구] — 왕국 지원비와 재료로 연구비를 모은다</figcaption></figure>
  </div>
 </div></section>
 
 <section class="blk alt" id="contents"><div class="wrap">
- <div class="head"><div class="tag">CONTENTS</div><h2>혼자, 그리고 함께</h2><p>매일 돌아오는 레이드와 모두가 함께하는 콘텐츠.</p></div>
- <div class="pair" style="margin-top:0">
-  <figure><div class="phone sm"><img src="img/wb.webp" alt="월드보스 화면"></div><figcaption>월드보스 — 모두의 공격이 쌓여 거대 보스를 쓰러뜨린다</figcaption></figure>
-  <figure><div class="phone sm"><img src="img/race.webp" alt="슬라임 경기장 화면"></div><figcaption>슬라임 경기장 — 1등을 맞히면 스킬 포인트와 강화권</figcaption></figure>
- </div>
+ <div class="head"><div class="tag">CONTENTS</div><h2>혼자, 그리고 함께</h2><p>캠페인과 무한 탐사로 강해지고, 레이드와 모두의 콘텐츠로 보상을 챙깁니다.</p></div>
+
+ <h3 class="grp"><i style="--c:#e8b84b"></i>모험</h3>
  <div class="tiles">
   <div class="tile" style="--c:#e8b84b"><h5><i></i>캠페인 5막</h5><p>막마다 보스 여덟을 잇달아 넘는 긴 원정. 5막을 넘기면 무한 탐사가 열립니다.</p></div>
-  <div class="tile" style="--c:#b06bff"><h5><i></i>무한 탐사</h5><p>깊을수록 강해지는 보스와 넓어지는 미궁. 최고 층으로 랭킹에 이름을 올리세요.</p></div>
-  <div class="tile" style="--c:#6fc3ff"><h5><i></i>수정 골렘 레이드</h5><p>쓰러지지 않는 골렘 앞에서 밀려오는 보스 무리를 몇 웨이브까지 넘기나.</p></div>
-  <div class="tile" style="--c:#e8664b"><h5><i></i>생존전 · 동료전</h5><p>끝없이 몰려오는 보스를 버티고, 동료와 함께 여섯 방을 돌파합니다.</p></div>
-  <div class="tile" style="--c:#7fd08a"><h5><i></i>공동 재단 · 용병단</h5><p>모두가 바친 재료로 열리는 가호, 보내 두면 보상을 들고 돌아오는 용병단.</p></div>
-  <div class="tile" style="--c:#d6b2ff"><h5><i></i>노역방 · 사역마</h5><p>잡은 몬스터가 재료를 만들고, 공물을 바치면 하루 종일 가호가 함께합니다.</p></div>
+  <div class="tile" style="--c:#b06bff"><h5><i></i>무한 탐사</h5><p>깊을수록 강해지는 보스와 넓어지는 미궁. 5층마다 보스 기믹(재생·가시·기습·흡혈·치명)이 바뀌고, 151층부터는 이길 때마다 왕국 지원비가 쌓입니다.</p></div>
+  <div class="tile" style="--c:#ffe65a"><h5><i></i>현상금 레이드</h5><p>매일 새로 열리는 현상금. 처음부터 깨어 있는 보스와 판 가운데 전설을 두고 다툽니다.</p></div>
+ </div>
+
+ <h3 class="grp"><i style="--c:#e8664b"></i>레이드</h3>
+ <div class="tiles">
+  <div class="tile" style="--c:#6fc3ff"><h5><i></i>수정 골렘 레이드</h5><p>보스 셋을 잡으면 봉인이 풀리고 골렘을 칠 수 있습니다. 튕겨 나면 더 강한 보스가 다시 봉인을 겁니다 — 몇 웨이브까지 버티나.</p></div>
+  <div class="tile" style="--c:#e8664b"><h5><i></i>생존전</h5><p>웨이브를 전멸시키면 다음 웨이브가 몰려옵니다. 직업을 골라 들어가고, 도달한 웨이브로 랭킹에 오릅니다. 무한 11층에 열립니다.</p></div>
+  <div class="tile" style="--c:#d6b2ff"><h5><i></i>동료전</h5><p>동료 둘을 골라 아래서부터 여섯 방을 뚫고 올라갑니다. 방 보스를 잡으면 위로 가는 봉인이 열리고, 꼭대기엔 골렘이 기다립니다. 무한 51층에 열립니다.</p></div>
+ </div>
+
+ <h3 class="grp"><i style="--c:#7fd08a"></i>모두 함께</h3>
+ <div class="pair" style="margin-top:0">
+  <figure><div class="phone sm"><img src="img/wb.webp" alt="월드보스 화면" loading="lazy"></div><figcaption>월드보스 — 모두의 공격이 쌓여 거대 보스를 쓰러뜨린다</figcaption></figure>
+  <figure><div class="phone sm"><img src="img/race.webp" alt="슬라임 경기장 화면" loading="lazy"></div><figcaption>슬라임 경기장 — 1등을 맞히면 스킬 포인트와 강화권</figcaption></figure>
+ </div>
+ <div class="tiles">
+  <div class="tile" style="--c:#7fd08a"><h5><i></i>월드보스</h5><p>로그인한 모험가 모두가 같은 보스를 때립니다. 내 전투력만큼 피해가 들어가고, 진행에 따라 골드와 강화권을 받습니다.</p></div>
+  <div class="tile" style="--c:#6fc3ff"><h5><i></i>슬라임 경기장</h5><p>다섯 마리 중 1등을 맞히는 경주. 전설 사본을 참가비로 내고, 맞히면 스킬 포인트와 강화권. 하루 10판.</p></div>
+  <div class="tile" style="--c:#e8b84b"><h5><i></i>공동 재단 · 골드 재단</h5><p>모두가 바친 재료로 재단 게이지가 차면 다 같이 보너스를 받습니다. 골드 재단은 단계가 오를수록 정련소 성공률이 오릅니다.</p></div>
+ </div>
+
+ <h3 class="grp"><i style="--c:#d6b2ff"></i>쌓이는 보상</h3>
+ <div class="tiles">
+  <div class="tile" style="--c:#d6b2ff"><h5><i></i>노역방 · 사역마</h5><p>잡은 몬스터가 노역방에서 재료와 조각을 만들어 둡니다. 사역마에게 공물을 바치면 하루 종일 가호가 함께합니다.</p></div>
+  <div class="tile" style="--c:#b06bff"><h5><i></i>용병단</h5><p>변신 주문서로 마법사·팔라딘·도적 용병을 꾸려 보내면, 몇 시간 뒤 장비 보따리를 들고 돌아옵니다.</p></div>
+  <div class="tile" style="--c:#ffe65a"><h5><i></i>일일 임무 · 업적</h5><p>매일 다섯 가지 임무와 완료 보너스. 업적 포인트로 초월·강화권 교환에 드는 사본을 줄이고 마법상점을 할인받습니다.</p></div>
+ </div>
+
+ <h3 class="grp"><i style="--c:#a8801e"></i>성장</h3>
+ <div class="tiles">
+  <div class="tile" style="--c:#e8b84b"><h5><i></i>대장간 · 정련소</h5><p>사본을 모아 제작·강화. 정련소에서 25강까지 한 번에, 그 위는 골드 강화와 강화권으로 — 전설은 50강까지. 남는 사본은 초월로.</p></div>
+  <div class="tile" style="--c:#b06bff"><h5><i></i>마법상점</h5><p>변신 주문서와 직업 스킬, 그리고 특수 스킬을 연구하는 [마법연구].</p></div>
+  <div class="tile" style="--c:#6fc3ff"><h5><i></i>랭킹</h5><p>무한 탐사(종합·무기별)·전투력·생존전 랭킹. 로그인하면 클라우드 백업으로 기기를 바꿔도 이어서.</p></div>
  </div>
 </div></section>
 
