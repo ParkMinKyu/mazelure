@@ -101,7 +101,7 @@ section.blk.alt{background:var(--bg2)}
 .chips span{font-family:'Galmuri11';font-size:12px;padding:3px 9px;border-radius:4px;border:1px solid var(--c);color:var(--c);background:rgba(0,0,0,.35)}
 
 /* 전설 */
-.legends{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.legends{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:960px;margin:0 auto}
 .lg{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;position:relative;transition:transform .15s,border-color .15s}
 .lg:hover{transform:translateY(-4px);border-color:var(--c)}
 .lg::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--c);z-index:1}
@@ -165,6 +165,13 @@ h3.grp:first-of-type{margin-top:0}
 h3.grp i{width:12px;height:12px;background:var(--c);box-shadow:2px 2px 0 rgba(0,0,0,.5)}
 #contents .tiles{margin-top:16px}
 #contents .pair{margin:18px 0 0}
+
+/* 화면 줄 */
+.gal{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 14px;margin:16px -4px 0;scrollbar-width:thin;scrollbar-color:#4a3e5c transparent}
+.gal figure{flex:0 0 auto;scroll-snap-align:start;text-align:center}
+.gal figcaption{font-size:12.5px;color:var(--mut);margin-top:8px;max-width:170px;word-break:keep-all}
+.phone.xs{width:170px;border-radius:18px;padding:5px;box-shadow:0 12px 30px rgba(0,0,0,.5)}
+.phone.xs img{border-radius:13px}
 
 /* 콘텐츠 타일 */
 .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}
@@ -230,7 +237,7 @@ footer .cp{margin-left:auto}
   <span class="eyebrow">방치형 미로 RPG</span>
   <h1>길치 용사<br>키우기</h1>
   <p class="lead">틀어 두면 용사가 알아서 미궁을 돌고, 보물을 줍고, 보스를 잡습니다. 전설 무기를 쥐여 주면 한 방이 달라집니다.</p>
-  <div class="chips"><span style="--c:#b06bff">공허의 낫</span><span style="--c:#7ee8ff">절대영도</span><span style="--c:#ffe65a">뇌신의 권능</span><span style="--c:#ff7b39">지옥불 대검</span></div>
+  <div class="chips"><span style="--c:#b06bff">공허의 낫</span><span style="--c:#7ee8ff">절대영도</span><span style="--c:#ffe65a">뇌신의 권능</span><span style="--c:#ff7b39">지옥불 대검</span><span style="--c:#ffd76a">엑스칼리버</span><span style="--c:#f2f2ff">창세의 검</span></div>
   <div class="stores">
    <a class="store" href="https://play.google.com/store/apps/details?id=com.niee.mazelure" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24"><path fill="#34a853" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z"/><path fill="#fbbc04" d="m17.2 8.6 3.4 1.9c1 .6 1 2.4 0 3l-3.4 1.9L13.8 12z"/><path fill="#ea4335" d="M13.8 12 3.6 22.2c.3.2.8.2 1.2 0l12.4-7z"/><path fill="#4285f4" d="M3.6 1.8 13.8 12l3.4-3.4-12.4-7c-.4-.2-.9-.2-1.2 0z"/></svg>
@@ -245,12 +252,14 @@ footer .cp{margin-left:auto}
 </div></section>
 
 <section class="blk alt" id="legend"><div class="wrap">
- <div class="head"><div class="tag">LEGEND</div><h2>전설 무기를 들면 이렇게 터진다</h2><p>무기마다 공격 연출과 상태 효과가 다릅니다. 자기 직업의 전설 무기를 들면 특수 스킬도 깨어납니다.</p></div>
+ <div class="head"><div class="tag">LEGEND</div><h2>전설 무기를 들면 이렇게 터진다</h2><p>전설 무기 여섯 자루, 무기마다 공격 연출과 상태 효과가 다릅니다. 자기 직업의 전설 무기를 들면 특수 스킬도 깨어납니다.</p></div>
  <div class="legends">
   <div class="lg" style="--c:#b06bff"><img src="img/lg_void.webp" alt="공허의 낫 — 소용돌이" loading="lazy"><div class="t"><div class="who">마법사 · 공허의 낫</div><h4>적을 빨아들이는 소용돌이</h4><p>범위 안 적을 한데 끌어모아 한 번에 터뜨리고, 시간을 멈춘다.</p></div></div>
   <div class="lg" style="--c:#7ee8ff"><img src="img/lg_ice.webp" alt="절대영도 — 얼음 가시" loading="lazy"><div class="t"><div class="who">팔라딘 · 절대영도</div><h4>땅에서 솟는 얼음 가시</h4><p>충격파가 두 번 쾅 — 얼어붙은 적은 그대로 깨부순다.</p></div></div>
   <div class="lg" style="--c:#ffe65a"><img src="img/lg_bolt.webp" alt="뇌신의 권능 — 벼락" loading="lazy"><div class="t"><div class="who">도적 · 뇌신의 권능</div><h4>보스에게 꽂히는 벼락</h4><p>붉은 칼날의 암살, 하늘에서 떨어지는 섬격.</p></div></div>
-  <div class="lg" style="--c:#ff7b39"><img src="img/lg_fire.webp" alt="지옥불 대검 — 불길" loading="lazy"><div class="t"><div class="who">전설 · 지옥불 대검</div><h4>휘몰아치는 불길</h4><p>맞은 적은 몸 윤곽 그대로 타오른다. 엑스칼리버·창세의 검까지 전설 6종.</p></div></div>
+  <div class="lg" style="--c:#ff7b39"><img src="img/lg_fire.webp" alt="지옥불 대검 — 불길" loading="lazy"><div class="t"><div class="who">전설 · 지옥불 대검</div><h4>휘몰아치는 불길</h4><p>불길이 휘몰아치고, 맞은 적은 몸 윤곽 그대로 타오른다.</p></div></div>
+  <div class="lg" style="--c:#ffd76a"><img src="img/lg_excal.webp" alt="엑스칼리버 — 금빛 섬광" loading="lazy"><div class="t"><div class="who">전설 · 엑스칼리버</div><h4>범위를 가르는 금빛 섬광</h4><p>범위 공격이 금빛 섬광으로 터지고, 팔라딘이 들면 금빛 기둥이 내려꽂힌다.</p></div></div>
+  <div class="lg" style="--c:#f2f2ff"><img src="img/lg_genesis.webp" alt="창세의 검 — 무지갯빛 프리즘" loading="lazy"><div class="t"><div class="who">전설 · 창세의 검</div><h4>피어나는 무지갯빛 프리즘</h4><p>무한 탐사 깊은 곳과 정련소 교환으로 얻는 마지막 전설.</p></div></div>
  </div>
 </div></section>
 
@@ -362,16 +371,14 @@ y.addEventListener('click',go);y.addEventListener('keydown',function(e){if(e.key
   </article>
  </div>
  <p class="note">특수 스킬은 그 직업의 전설 무기를 들었을 때 발동하고, 무기 강화가 높을수록 세집니다(+50강 최대). 배우는 데는 무한 151층부터 쌓이는 연구비를 씁니다 — 마법상점 [마법연구].</p>
- <div class="pair">
-  <figure><div class="phone sm"><img src="img/special.webp" alt="특수 스킬 화면" loading="lazy"></div><figcaption>마법상점 · 직업 탭 [특수]</figcaption></figure>
-  <figure><div class="phone sm"><img src="img/lab.webp" alt="마법연구 화면" loading="lazy"></div><figcaption>마법상점 · [마법연구] — 왕국 지원비와 재료로 연구비를 모은다</figcaption></figure>
- </div>
+ <div class="gal"><figure><div class="phone xs"><img src="img/g_mage_fx.webp" alt="마법사 · 공허의 낫 소용돌이" loading="lazy"></div><figcaption>마법사 · 공허의 낫 소용돌이</figcaption></figure><figure><div class="phone xs"><img src="img/g_pal_fx.webp" alt="팔라딘 · 절대영도 얼음 가시" loading="lazy"></div><figcaption>팔라딘 · 절대영도 얼음 가시</figcaption></figure><figure><div class="phone xs"><img src="img/g_rogue_fx.webp" alt="도적 · 뇌신의 권능 섬격" loading="lazy"></div><figcaption>도적 · 뇌신의 권능 섬격</figcaption></figure><figure><div class="phone xs"><img src="img/g_mage_sk.webp" alt="마법사 [특수] 공허 스킬" loading="lazy"></div><figcaption>마법사 [특수] 공허 스킬</figcaption></figure><figure><div class="phone xs"><img src="img/g_pal_sk.webp" alt="팔라딘 [특수] 영도 스킬" loading="lazy"></div><figcaption>팔라딘 [특수] 영도 스킬</figcaption></figure><figure><div class="phone xs"><img src="img/g_rogue_sk.webp" alt="도적 [특수] 뇌신 스킬" loading="lazy"></div><figcaption>도적 [특수] 뇌신 스킬</figcaption></figure><figure><div class="phone xs"><img src="img/lab.webp" alt="[마법연구] 연구비 모으기" loading="lazy"></div><figcaption>[마법연구] 연구비 모으기</figcaption></figure><figure><div class="phone xs"><img src="img/g_mshop.webp" alt="변신 주문서·기본 스킬" loading="lazy"></div><figcaption>변신 주문서·기본 스킬</figcaption></figure></div>
 </div></section>
 
 <section class="blk alt" id="contents"><div class="wrap">
  <div class="head"><div class="tag">CONTENTS</div><h2>혼자, 그리고 함께</h2><p>캠페인과 무한 탐사로 강해지고, 레이드와 모두의 콘텐츠로 보상을 챙깁니다.</p></div>
 
  <h3 class="grp"><i style="--c:#e8b84b"></i>모험</h3>
+ <div class="gal"><figure><div class="phone xs"><img src="img/fight.webp" alt="무한 탐사 — 알아서 싸우는 판" loading="lazy"></div><figcaption>무한 탐사 — 알아서 싸우는 판</figcaption></figure><figure><div class="phone xs"><img src="img/chase.webp" alt="보스전" loading="lazy"></div><figcaption>보스전</figcaption></figure><figure><div class="phone xs"><img src="img/g_endless.webp" alt="층 고르기 · 승률 보고 출격" loading="lazy"></div><figcaption>층 고르기 · 승률 보고 출격</figcaption></figure><figure><div class="phone xs"><img src="img/g_bounty.webp" alt="오늘의 현상금" loading="lazy"></div><figcaption>오늘의 현상금</figcaption></figure><figure><div class="phone xs"><img src="img/g_bounty_play.webp" alt="현상금 판" loading="lazy"></div><figcaption>현상금 판</figcaption></figure></div>
  <div class="tiles">
   <div class="tile" style="--c:#e8b84b"><h5><i></i>캠페인 5막</h5><p>막마다 보스 여덟을 잇달아 넘는 긴 원정. 5막을 넘기면 무한 탐사가 열립니다.</p></div>
   <div class="tile" style="--c:#b06bff"><h5><i></i>무한 탐사</h5><p>깊을수록 강해지는 보스와 넓어지는 미궁. 5층마다 보스 기믹(재생·가시·기습·흡혈·치명)이 바뀌고, 151층부터는 이길 때마다 왕국 지원비가 쌓입니다.</p></div>
@@ -379,6 +386,7 @@ y.addEventListener('click',go);y.addEventListener('keydown',function(e){if(e.key
  </div>
 
  <h3 class="grp"><i style="--c:#e8664b"></i>레이드</h3>
+ <div class="gal"><figure><div class="phone xs"><img src="img/g_raid.webp" alt="레이드 고르기" loading="lazy"></div><figcaption>레이드 고르기</figcaption></figure><figure><div class="phone xs"><img src="img/g_golem.webp" alt="수정 골렘 레이드" loading="lazy"></div><figcaption>수정 골렘 레이드</figcaption></figure><figure><div class="phone xs"><img src="img/g_surv.webp" alt="생존전 — 직업 고르기" loading="lazy"></div><figcaption>생존전 — 직업 고르기</figcaption></figure><figure><div class="phone xs"><img src="img/g_surv_play.webp" alt="생존전 웨이브" loading="lazy"></div><figcaption>생존전 웨이브</figcaption></figure><figure><div class="phone xs"><img src="img/g_party.webp" alt="동료전 — 동료 고르기" loading="lazy"></div><figcaption>동료전 — 동료 고르기</figcaption></figure><figure><div class="phone xs"><img src="img/g_party_play.webp" alt="동료전 방 돌파" loading="lazy"></div><figcaption>동료전 방 돌파</figcaption></figure></div>
  <div class="tiles">
   <div class="tile" style="--c:#6fc3ff"><h5><i></i>수정 골렘 레이드</h5><p>보스 셋을 잡으면 봉인이 풀리고 골렘을 칠 수 있습니다. 튕겨 나면 더 강한 보스가 다시 봉인을 겁니다 — 몇 웨이브까지 버티나.</p></div>
   <div class="tile" style="--c:#e8664b"><h5><i></i>생존전</h5><p>웨이브를 전멸시키면 다음 웨이브가 몰려옵니다. 직업을 골라 들어가고, 도달한 웨이브로 랭킹에 오릅니다. 무한 11층에 열립니다.</p></div>
@@ -386,10 +394,7 @@ y.addEventListener('click',go);y.addEventListener('keydown',function(e){if(e.key
  </div>
 
  <h3 class="grp"><i style="--c:#7fd08a"></i>모두 함께</h3>
- <div class="pair" style="margin-top:0">
-  <figure><div class="phone sm"><img src="img/wb.webp" alt="월드보스 화면" loading="lazy"></div><figcaption>월드보스 — 모두의 공격이 쌓여 거대 보스를 쓰러뜨린다</figcaption></figure>
-  <figure><div class="phone sm"><img src="img/race.webp" alt="슬라임 경기장 화면" loading="lazy"></div><figcaption>슬라임 경기장 — 1등을 맞히면 스킬 포인트와 강화권</figcaption></figure>
- </div>
+ <div class="gal"><figure><div class="phone xs"><img src="img/wb.webp" alt="월드보스" loading="lazy"></div><figcaption>월드보스</figcaption></figure><figure><div class="phone xs"><img src="img/race.webp" alt="슬라임 경기장 — 경주" loading="lazy"></div><figcaption>슬라임 경기장 — 경주</figcaption></figure><figure><div class="phone xs"><img src="img/g_race2.webp" alt="결승선" loading="lazy"></div><figcaption>결승선</figcaption></figure><figure><div class="phone xs"><img src="img/g_altar.webp" alt="공동 재단" loading="lazy"></div><figcaption>공동 재단</figcaption></figure><figure><div class="phone xs"><img src="img/g_galtar.webp" alt="골드 재단" loading="lazy"></div><figcaption>골드 재단</figcaption></figure></div>
  <div class="tiles">
   <div class="tile" style="--c:#7fd08a"><h5><i></i>월드보스</h5><p>로그인한 모험가 모두가 같은 보스를 때립니다. 내 전투력만큼 피해가 들어가고, 진행에 따라 골드와 강화권을 받습니다.</p></div>
   <div class="tile" style="--c:#6fc3ff"><h5><i></i>슬라임 경기장</h5><p>다섯 마리 중 1등을 맞히는 경주. 전설 사본을 참가비로 내고, 맞히면 스킬 포인트와 강화권. 하루 10판.</p></div>
@@ -397,6 +402,7 @@ y.addEventListener('click',go);y.addEventListener('keydown',function(e){if(e.key
  </div>
 
  <h3 class="grp"><i style="--c:#d6b2ff"></i>쌓이는 보상</h3>
+ <div class="gal"><figure><div class="phone xs"><img src="img/g_camp.webp" alt="노역방" loading="lazy"></div><figcaption>노역방</figcaption></figure><figure><div class="phone xs"><img src="img/g_fam.webp" alt="사역마" loading="lazy"></div><figcaption>사역마</figcaption></figure><figure><div class="phone xs"><img src="img/g_merc.webp" alt="용병단 — 모험 일대기" loading="lazy"></div><figcaption>용병단 — 모험 일대기</figcaption></figure><figure><div class="phone xs"><img src="img/g_ach.webp" alt="업적" loading="lazy"></div><figcaption>업적</figcaption></figure></div>
  <div class="tiles">
   <div class="tile" style="--c:#d6b2ff"><h5><i></i>노역방 · 사역마</h5><p>잡은 몬스터가 노역방에서 재료와 조각을 만들어 둡니다. 사역마에게 공물을 바치면 하루 종일 가호가 함께합니다.</p></div>
   <div class="tile" style="--c:#b06bff"><h5><i></i>용병단</h5><p>변신 주문서로 마법사·팔라딘·도적 용병을 꾸려 보내면, 몇 시간 뒤 장비 보따리를 들고 돌아옵니다.</p></div>
@@ -404,6 +410,7 @@ y.addEventListener('click',go);y.addEventListener('keydown',function(e){if(e.key
  </div>
 
  <h3 class="grp"><i style="--c:#a8801e"></i>성장</h3>
+ <div class="gal"><figure><div class="phone xs"><img src="img/g_hub.webp" alt="허브" loading="lazy"></div><figcaption>허브</figcaption></figure><figure><div class="phone xs"><img src="img/equip.webp" alt="정련소 — 전설 40강" loading="lazy"></div><figcaption>정련소 — 전설 40강</figcaption></figure><figure><div class="phone xs"><img src="img/g_smith.webp" alt="대장간" loading="lazy"></div><figcaption>대장간</figcaption></figure></div>
  <div class="tiles">
   <div class="tile" style="--c:#e8b84b"><h5><i></i>대장간 · 정련소</h5><p>사본을 모아 제작·강화. 정련소에서 25강까지 한 번에, 그 위는 골드 강화와 강화권으로 — 전설은 50강까지. 남는 사본은 초월로.</p></div>
   <div class="tile" style="--c:#b06bff"><h5><i></i>마법상점</h5><p>변신 주문서와 직업 스킬, 그리고 특수 스킬을 연구하는 [마법연구].</p></div>
