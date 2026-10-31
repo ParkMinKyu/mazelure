@@ -4,6 +4,11 @@
 <meta name="description" content="틀어 두면 길치 용사가 알아서 미궁을 돌며 파밍하고 보스를 잡는 방치형 미로 RPG. 전설 무기마다 다른 한 방, 마법사·팔라딘·도적 변신, 무한 탐사, 월드보스, 슬라임 경기장. 안드로이드·아이폰 무료.">
 <meta name="keywords" content="길치 용사 키우기, 길치용사, Maze Lure, 방치형 RPG, 키우기 게임, 방치형 게임, 모바일 RPG, 무한 탐사, 월드보스">
 <link rel="canonical" href="https://parkminkyu.github.io/mazelure/">
+<link rel="alternate" hreflang="ko" href="https://parkminkyu.github.io/mazelure/">
+<link rel="alternate" hreflang="en" href="https://parkminkyu.github.io/mazelure/en.html">
+<link rel="alternate" hreflang="x-default" href="https://parkminkyu.github.io/mazelure/en.html">
+<script>try{var q=new URLSearchParams(location.search).get('lang');if(q)localStorage.setItem('ml_lang',q);
+var L=localStorage.getItem('ml_lang');if((L==='en'||(!L&&!/^ko/i.test(navigator.language||'')))&&!/bot|crawl|spider|slurp|yeti|daum/i.test(navigator.userAgent))location.replace('en.html');}catch(e){}</script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="길치 용사 키우기">
 <meta property="og:locale" content="ko_KR">
@@ -48,6 +53,7 @@ a{color:inherit;text-decoration:none}
 .menu a{padding:8px 11px;font-size:14px;color:var(--mut);border-radius:8px;white-space:nowrap}
 .menu a:hover{color:var(--ink);background:var(--panel)}
 .menu a.codex{color:var(--gold)}
+.menu a.lang{color:var(--mana);border:1px solid #2f5a74;margin-left:4px}
 
 /* 첫 화면 */
 .hero{position:relative;overflow:hidden;border-bottom:2px solid var(--gold2)}
@@ -216,19 +222,20 @@ footer .cp{margin-left:auto}
  .tiles{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:520px){
- .menu a:not(.codex){display:none}
+ .menu a:not(.codex):not(.lang){display:none}
  .tiles{grid-template-columns:1fr}
  .tilt{transform:none}
  section.blk{padding:56px 0}
  footer .cp{margin-left:0}
 }
+
 </style></head><body>
 
 <header class="top"><div class="wrap">
  <a class="brand" href="#"><img src="img/icon.webp" alt=""><span>길치 용사 키우기</span></a>
  <nav class="menu">
   <a href="#legend">전설</a><a href="#video">영상</a><a href="#about">소개</a><a href="#classes">직업</a><a href="#contents">콘텐츠</a><a href="#news">소식</a>
-  <a class="codex" href="info.html">도감 ▸</a>
+  <a class="codex" href="info.html">도감 ▸</a><a class="lang" href="en.html?lang=en" hreflang="en">EN</a>
  </nav>
 </div></header>
 
@@ -457,6 +464,7 @@ y.addEventListener('click',go);y.addEventListener('keydown',function(e){if(e.key
  <a href="https://discord.gg/3wrs528tHa" target="_blank" rel="noopener">디스코드</a>
  <a href="maze-lure-terms.html">이용약관</a>
  <a href="maze-lure-privacy.html">개인정보처리방침</a>
+ <a href="en.html?lang=en" hreflang="en">English</a>
  <span class="cp">© 길치 용사 키우기</span>
 </div></footer>
 </body></html>

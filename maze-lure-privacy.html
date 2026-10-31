@@ -3,16 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>개인정보처리방침 — 길치 용사 키우기</title>
+<title>개인정보처리방침 · Privacy Policy — 길치 용사 키우기 (Maze Lure)</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     background: #f7f5f0; color: #2a2722;
-    font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", -apple-system, "Segoe UI", sans-serif;
     line-height: 1.75; padding: 40px 20px;
   }
-  .doc { max-width: 720px; margin: 0 auto; background: #fff; border: 1px solid #e2ddd2;
+  .doc { max-width: 720px; margin: 0 auto 24px; background: #fff; border: 1px solid #e2ddd2;
          border-radius: 12px; padding: 48px 40px; }
+  .lang { max-width: 720px; margin: 0 auto 12px; text-align: right; font-size: 14px; color: #857f6e; }
+  .lang a { color: #857f6e; text-decoration: none; padding: 2px 6px; }
+  .lang a.on { color: #a8852e; font-weight: 700; }
   h1 { font-size: 26px; margin-bottom: 4px; }
   .sub { color: #857f6e; font-size: 14px; margin-bottom: 32px; }
   h2 { font-size: 18px; margin: 32px 0 10px; padding-top: 20px; border-top: 1px solid #eee8db;
@@ -28,18 +31,21 @@
   a { color: #a8852e; }
   .foot { margin-top: 36px; padding-top: 20px; border-top: 1px solid #eee8db;
           color: #857f6e; font-size: 13px; }
-  @media (max-width: 600px) { .doc { padding: 32px 22px; } }
+  @media (max-width: 600px) { .doc { padding: 32px 22px; } th { white-space: normal; } }
 </style>
 </head>
 <body>
-<div class="doc">
+<div class="lang"><a href="?lang=ko" data-l="ko">한국어</a> · <a href="?lang=en" data-l="en">English</a></div>
+
+<div class="doc" lang="ko" data-l="ko">
   <h1>개인정보처리방침</h1>
-  <div class="sub">길치 용사 키우기 (Maze Lure) · 개발자: niee · 제정 2026년 7월 23일 · 개정 2026년 9월 22일</div>
+  <div class="sub">길치 용사 키우기 (Maze Lure) · 개발자: niee · 제정 2026년 7월 23일 · 개정 2026년 10월 31일</div>
 
   <div class="box">
     요약: 게임의 모든 콘텐츠는 <b>로그인 없이</b> 이용할 수 있습니다.
-    클라우드 백업·랭킹 참여 시에만 이메일 계정이 사용되며, 광고·외부 분석 SDK는 포함하지 않습니다.
-    수집한 정보는 아래 목적 외로 사용하거나 제3자에게 제공하지 않습니다.
+    클라우드 백업·랭킹·자동 사냥 등 계정 기능을 쓸 때만 이메일 계정이 사용됩니다.
+    광고는 이용자가 직접 고른 <b>보상형 광고</b>(재단 충전)만 있으며, 이때 Google AdMob이 광고를 표시합니다.
+    수집한 정보는 아래 목적 외로 사용하거나 판매하지 않습니다.
   </div>
 
   <h2>1. 수집하는 개인정보와 목적·보유 기간</h2>
@@ -48,9 +54,11 @@
     <tr><td>이메일 주소·비밀번호</td><td>클라우드 계정 가입 시 (선택)</td>
         <td>계정 생성·로그인, 세이브 백업/복원</td><td>계정 삭제 시 즉시 파기</td></tr>
     <tr><td>닉네임</td><td>랭킹 등록 시 (선택)</td>
-        <td>순위표 표시</td><td>계정 삭제 시 즉시 파기</td></tr>
-    <tr><td>사용자 식별자 (계정 uid·앱 생성 ID)</td><td>계정 생성·앱 이용 시 자동</td>
-        <td>계정 관리, 이용 통계</td><td>계정 삭제 시 파기 (통계용 식별자는 개인 비식별)</td></tr>
+        <td>순위표·월드보스·경기장 등 기록 표시</td><td>계정 삭제 시 즉시 파기</td></tr>
+    <tr><td>사용자 식별자 (계정 uid·앱 생성 ID·재단 익명 번호)</td><td>계정 생성·앱 이용 시 자동</td>
+        <td>계정 관리, 공동 콘텐츠(재단·월드보스·경기장·자동 사냥) 기록, 이용 통계</td><td>계정 삭제 시 파기 (통계용 식별자는 개인 비식별)</td></tr>
+    <tr><td>공동 콘텐츠 기록 (재단 기여·월드보스 피해·경기장 참가·자동 사냥 판 수·보상형 광고 시청 확인)</td><td>해당 기능 이용 시</td>
+        <td>보상 지급, 순위 표시, 부정 이용 방지</td><td>계정 삭제 시 파기 (익명 기록은 목적 달성 시 파기)</td></tr>
     <tr><td>구매 기록 (주문번호·상품·구매 시각·기기 모델)</td><td>유료 결제 시</td>
         <td>구매 복구·지급 보장, 환불 대조, 부정 이용 방지</td>
         <td>전자상거래법에 따라 5년 보관 후 파기</td></tr>
@@ -60,23 +68,31 @@
         <td>부정 이용 재발 방지</td><td>목적 달성 시 파기</td></tr>
   </table>
   <p>비밀번호는 Google 인증 서버(Firebase Authentication)에 암호화되어 보관되며, 개발자는 열람할 수 없습니다.
-  결제 수단(카드 정보 등)은 Google Play가 처리하며 개발자는 수집·접근하지 않습니다.</p>
+  결제 수단(카드 정보 등)은 Google Play·Apple App Store가 처리하며 개발자는 수집·접근하지 않습니다.</p>
 
   <h2>2. 처리 위탁 및 국외 이전</h2>
-  <p>수집된 정보는 서비스 운영을 위해 아래 사업자의 클라우드 인프라에 저장됩니다.</p>
+  <p>수집된 정보는 서비스 운영을 위해 아래 사업자의 인프라에 저장·처리됩니다.</p>
   <table>
     <tr><th>수탁자</th><th>이전 항목</th><th>이전 국가·시점</th><th>보유 기간</th></tr>
     <tr><td>Google LLC (Firebase Authentication·Cloud Firestore)</td>
-        <td>1항의 수집 항목 전체</td>
+        <td>1항의 계정·세이브·랭킹·이용 기록</td>
         <td>미국 등 Google 클라우드 리전 · 서비스 이용 시 네트워크 전송</td>
         <td>1항의 보유 기간과 동일</td></tr>
-    <tr><td>Google LLC (Google Play 결제)</td><td>결제 처리 정보</td>
-        <td>Google Play 인프라 · 결제 시</td><td>Google Play 정책에 따름</td></tr>
+    <tr><td>Google LLC (Google AdMob)</td>
+        <td>광고 식별자·IP 주소 등 광고 표시에 필요한 기기 정보</td>
+        <td>미국 등 Google 인프라 · 보상형 광고를 볼 때</td>
+        <td>Google 개인정보처리방침에 따름</td></tr>
+    <tr><td>Google LLC (Google Play 결제) · Apple Inc. (App Store 결제)</td><td>결제 처리 정보</td>
+        <td>각 스토어 인프라 · 결제 시</td><td>각 스토어 정책에 따름</td></tr>
   </table>
+  <p>재단·월드보스·경기장·자동 사냥 기록은 개발자가 직접 운영하는 서버(대한민국)에 저장됩니다.</p>
 
-  <h2>3. 제3자 제공</h2>
-  <p>수집한 개인정보를 제3자에게 제공하지 않습니다. 광고 SDK·외부 분석(애널리틱스) SDK를 포함하지 않습니다.
-  랭킹에 등록한 닉네임과 기록은 게임 기능으로서 다른 이용자에게 표시됩니다.</p>
+  <h2>3. 제3자 제공 및 광고</h2>
+  <p>수집한 개인정보를 판매하거나 제3자에게 제공하지 않습니다. 랭킹·월드보스·경기장에 표시되는 닉네임과 기록은
+  게임 기능으로서 다른 이용자에게 보입니다.</p>
+  <p>게임 안 광고는 이용자가 재단에서 직접 누른 보상형 광고뿐이며, Google AdMob이 광고를 고르고 표시합니다.
+  AdMob이 수집·이용하는 정보는 <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 광고 정책</a>을 따르며,
+  기기 설정에서 광고 식별자를 재설정하거나 맞춤 광고를 끌 수 있습니다. 외부 분석(애널리틱스) SDK는 포함하지 않습니다.</p>
 
   <h2>4. 기기 내 저장 데이터</h2>
   <p>게임 진행 데이터(레벨·장비·재화 등)는 기본적으로 이용자 기기 안에 저장되며,
@@ -87,7 +103,7 @@
     <li>게임 내 <b>구름(클라우드) 버튼 → 계정 삭제</b>로 언제든 계정과 서버 데이터(세이브·랭킹 기록)를 즉시 삭제할 수 있습니다.
         자세한 절차는 <a href="maze-lure-delete.html">계정 삭제 안내</a>를 참고해 주세요.</li>
     <li>법령에 따라 보관이 필요한 정보(구매 기록)는 해당 기간 보관 후 지체 없이 파기합니다.</li>
-    <li>열람·정정 등 기타 요청은 아래 문의처로 연락 주시면 확인 후 처리합니다.</li>
+    <li>열람·정정·삭제·처리 정지 등 기타 요청은 아래 문의처로 연락 주시면 확인 후 처리합니다.</li>
   </ul>
 
   <h2>6. 아동의 개인정보</h2>
@@ -96,10 +112,10 @@
 
   <h2>7. 앱 권한</h2>
   <ul>
-    <li>인터넷(INTERNET): 클라우드 백업·랭킹·이용 통계·결제 처리·게임 내 도움말 표시에 사용됩니다.</li>
-    <li>알림(POST_NOTIFICATIONS, 선택): 일일 보상 갱신·용병단 복귀·레이드 입장 열림을 기기에서 알려 주는 데만 사용됩니다.
+    <li>인터넷(INTERNET): 클라우드 백업·랭킹·공동 콘텐츠·이용 통계·결제 처리·광고·게임 내 도움말 표시에 사용됩니다.</li>
+    <li>알림(POST_NOTIFICATIONS, 선택): 일일 보상 갱신·용병단 복귀·레이드 입장 열림 등을 기기에서 알려 주는 데만 사용됩니다.
     알림은 기기 안에서 예약되며 이를 위해 수집·전송되는 개인정보는 없습니다. 거부해도 게임 이용에 제한이 없고,
-    게임 내 알림 버튼이나 기기 설정에서 언제든 끌 수 있습니다.</li>
+    게임 내 설정의 알림이나 기기 설정에서 언제든 끌 수 있습니다.</li>
   </ul>
 
   <h2>8. 외부 링크</h2>
@@ -114,18 +130,113 @@
     <li>개발자: niee</li>
     <li>이메일: <a href="mailto:smartmingue@gmail.com">smartmingue@gmail.com</a></li>
   </ul>
-
-  <div class="foot">
-    Privacy Policy (English summary): "Maze Lure" can be played fully without an account.
-    If you opt in to cloud backup / rankings, we collect an email address, nickname, and user
-    identifiers via Google Firebase (stored on Google Cloud infrastructure, e.g. in the U.S.).
-    Purchase records (order id, product, timestamp, device model) are kept for 5 years as required
-    by Korean e-commerce law; payment instruments are processed by Google Play and never reach the
-    developer. Gameplay events are collected for aggregate analytics only. No advertising or
-    third-party analytics SDKs are included, and no data is shared with third parties. You can
-    delete your account and server data at any time in-game (Cloud → Delete Account) — see the
-    <a href="maze-lure-delete.html">account deletion guide</a>. Contact: smartmingue@gmail.com
-  </div>
 </div>
+
+<div class="doc" lang="en" data-l="en">
+  <h1>Privacy Policy</h1>
+  <div class="sub">Maze Lure (길치 용사 키우기) · Developer: niee · Effective July 23, 2026 · Last updated October 31, 2026</div>
+
+  <div class="box">
+    Summary: All game content can be played <b>without an account</b>.
+    An email account is used only if you choose account features such as cloud backup, rankings or Auto Hunt.
+    The only ads are <b>rewarded ads</b> you choose to watch (altar recharge), shown by Google AdMob.
+    We do not sell your information or use it for anything other than the purposes below.
+  </div>
+
+  <h2>1. Information we collect, why, and how long we keep it</h2>
+  <table>
+    <tr><th>Information</th><th>When</th><th>Purpose</th><th>Retention</th></tr>
+    <tr><td>Email address and password</td><td>When you create a cloud account (optional)</td>
+        <td>Account creation and sign-in, save backup/restore</td><td>Deleted immediately when you delete your account</td></tr>
+    <tr><td>Nickname</td><td>When you join the rankings (optional)</td>
+        <td>Shown on leaderboards, World Boss, Slime Race and similar records</td><td>Deleted immediately when you delete your account</td></tr>
+    <tr><td>User identifiers (account uid, app-generated ID, anonymous altar number)</td><td>Automatically, when you create an account or use the app</td>
+        <td>Account management, records for shared content (altars, World Boss, Slime Race, Auto Hunt), usage statistics</td><td>Deleted with your account (identifiers used for statistics are not linked to you)</td></tr>
+    <tr><td>Shared-content records (altar contributions, World Boss damage, race entries, Auto Hunt runs, rewarded-ad completion)</td><td>When you use those features</td>
+        <td>Granting rewards, showing rankings, preventing abuse</td><td>Deleted with your account (anonymous records once their purpose is fulfilled)</td></tr>
+    <tr><td>Purchase records (order number, product, purchase time, device model)</td><td>When you make a purchase</td>
+        <td>Restoring and guaranteeing purchases, matching refunds, preventing abuse</td>
+        <td>Kept for 5 years as required by Korean e-commerce law, then deleted</td></tr>
+    <tr><td>Gameplay records (level progress, sessions and other play events)</td><td>Automatically, while you play</td>
+        <td>Aggregate statistics to improve the game (not used to identify you)</td><td>Deleted once the statistical purpose is fulfilled</td></tr>
+    <tr><td>Abuse records (history of restrictions)</td><td>When a restriction is applied</td>
+        <td>Preventing repeated abuse</td><td>Deleted once the purpose is fulfilled</td></tr>
+  </table>
+  <p>Passwords are stored encrypted on Google's authentication servers (Firebase Authentication) and cannot be viewed by the developer.
+  Payment methods (card details, etc.) are handled by Google Play and the Apple App Store; the developer never collects or accesses them.</p>
+
+  <h2>2. Processors and international transfers</h2>
+  <p>To run the service, your information is stored and processed on the infrastructure of the following companies.</p>
+  <table>
+    <tr><th>Processor</th><th>Information</th><th>Location and timing</th><th>Retention</th></tr>
+    <tr><td>Google LLC (Firebase Authentication, Cloud Firestore)</td>
+        <td>Account, save, ranking and gameplay records listed in Section 1</td>
+        <td>Google Cloud regions including the United States · transmitted while you use the service</td>
+        <td>Same as Section 1</td></tr>
+    <tr><td>Google LLC (Google AdMob)</td>
+        <td>Advertising ID, IP address and other device information needed to show ads</td>
+        <td>Google infrastructure including the United States · when you watch a rewarded ad</td>
+        <td>Per Google's privacy policy</td></tr>
+    <tr><td>Google LLC (Google Play billing) · Apple Inc. (App Store billing)</td><td>Payment processing information</td>
+        <td>Each store's infrastructure · at the time of purchase</td><td>Per each store's policy</td></tr>
+  </table>
+  <p>Altar, World Boss, Slime Race and Auto Hunt records are stored on a server operated by the developer in the Republic of Korea.</p>
+
+  <h2>3. Sharing and advertising</h2>
+  <p>We do not sell your personal information or share it with third parties. Nicknames and records shown in rankings,
+  World Boss and Slime Race are visible to other players as part of the game.</p>
+  <p>The only in-game ads are rewarded ads that you start yourself at an altar; Google AdMob selects and displays them.
+  Information collected by AdMob is governed by <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's advertising policies</a>,
+  and you can reset your advertising ID or turn off personalized ads in your device settings. No third-party analytics SDKs are included.</p>
+
+  <h2>4. Data stored on your device</h2>
+  <p>Game progress (levels, gear, currencies, etc.) is stored on your device by default and is removed when you uninstall the app.
+  A server copy exists only if you use cloud backup.</p>
+
+  <h2>5. Deletion and your rights</h2>
+  <ul>
+    <li>You can delete your account and server data (saves, ranking records) at any time in-game via <b>Cloud button → Delete Account</b>.
+        See the <a href="maze-lure-delete.html?lang=en">account deletion guide</a> for details.</li>
+    <li>Information we must keep by law (purchase records) is deleted without delay once the required period ends.</li>
+    <li>For other requests — access, correction, deletion, or restriction of processing — contact us below and we will respond after verification.</li>
+  </ul>
+
+  <h2>6. Children's privacy</h2>
+  <p>We do not knowingly collect personal information from children under 14 (or under 13 where that is the applicable age).
+  If we learn that a child created an account without parental consent, we delete it without delay.</p>
+
+  <h2>7. App permissions</h2>
+  <ul>
+    <li>Internet (INTERNET): used for cloud backup, rankings, shared content, usage statistics, payment processing, ads and in-game help.</li>
+    <li>Notifications (POST_NOTIFICATIONS, optional): used only to remind you on your device about daily rewards, returning mercenaries, raids opening and similar events.
+    Notifications are scheduled on the device and no personal information is collected or sent for them. Declining does not limit the game,
+    and you can turn them off anytime in the in-game settings or your device settings.</li>
+  </ul>
+
+  <h2>8. External links</h2>
+  <p>The in-game Discord button opens an external service (Discord); that service's own privacy policy applies when you use it.</p>
+
+  <h2>9. Changes to this policy</h2>
+  <p>If this policy changes, we will post the update on this page, and the revised policy applies from the time it is posted.</p>
+
+  <h2>10. Contact</h2>
+  <ul>
+    <li>Developer: niee</li>
+    <li>Email: <a href="mailto:smartmingue@gmail.com">smartmingue@gmail.com</a></li>
+  </ul>
+  <div class="foot">If the Korean and English versions differ, the Korean version prevails.</div>
+</div>
+
+<script>
+(function(){
+  var L='';
+  try{L=new URLSearchParams(location.search).get('lang')||'';if(L)localStorage.setItem('ml_lang',L);else L=localStorage.getItem('ml_lang')||'';}catch(e){}
+  if(L!=='ko'&&L!=='en')L=/^ko/i.test(navigator.language||'')?'ko':'en';
+  document.documentElement.lang=L;
+  document.querySelectorAll('.doc').forEach(function(d){d.style.display=d.getAttribute('data-l')===L?'':'none';});
+  document.querySelectorAll('.lang a').forEach(function(a){a.className=a.getAttribute('data-l')===L?'on':'';});
+  document.title=L==='en'?'Privacy Policy — Maze Lure':'개인정보처리방침 — 길치 용사 키우기';
+})();
+</script>
 </body>
 </html>

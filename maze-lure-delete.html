@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>계정 삭제 안내 — 길치 용사 키우기</title>
+<title>계정 삭제 안내 · Account Deletion — 길치 용사 키우기 (Maze Lure)</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -29,10 +29,16 @@
   .foot { margin-top: 36px; padding-top: 20px; border-top: 1px solid #eee8db;
           color: #857f6e; font-size: 13px; }
   @media (max-width: 600px) { .doc { padding: 32px 22px; } }
+  .doc { margin-bottom: 24px; }
+  .lang { max-width: 720px; margin: 0 auto 12px; text-align: right; font-size: 14px; color: #857f6e; }
+  .lang a { color: #857f6e; text-decoration: none; padding: 2px 6px; }
+  .lang a.on { color: #a8852e; font-weight: 700; }
 </style>
 </head>
 <body>
-<div class="doc">
+<div class="lang"><a href="?lang=ko" data-l="ko">한국어</a> · <a href="?lang=en" data-l="en">English</a></div>
+
+<div class="doc" lang="ko" data-l="ko">
   <h1>계정 삭제 안내</h1>
   <div class="sub">길치 용사 키우기 (Maze Lure) · 개발자: niee</div>
 
@@ -75,5 +81,61 @@
     문의: smartmingue@gmail.com
   </div>
 </div>
+
+<div class="doc" lang="en" data-l="en">
+  <h1>Account Deletion</h1>
+  <div class="sub">Maze Lure (길치 용사 키우기) · Developer: niee</div>
+
+  <p>This page explains how to delete your Maze Lure cloud account and its data.
+  Deletion happens immediately inside the game, with no approval step or waiting period.</p>
+
+  <h2>1. Delete your account in the game</h2>
+  <div class="box">
+    <ol>
+      <li>Open the game → tap the <b>Cloud button</b> at the top of the hub screen</li>
+      <li>If you are not signed in, sign in to the account you want to delete</li>
+      <li>Tap <b>"Delete Account"</b></li>
+      <li>Re-enter your password to confirm, and the account is <b>deleted immediately</b></li>
+    </ol>
+  </div>
+
+  <h2>2. If you can't install the app</h2>
+  <p>If you have already removed the app or can't use your device, email
+  <a href="mailto:smartmingue@gmail.com">smartmingue@gmail.com</a>
+  with the email address you signed up with and ask for your account to be deleted. We will process it within 7 days after verification.</p>
+
+  <h2>3. Data that is deleted</h2>
+  <table>
+    <tr><th>Data</th><th>Handling</th></tr>
+    <tr><td>Account information (email address, authentication data)</td><td>Deleted immediately</td></tr>
+    <tr><td>Cloud save (backup of your game progress)</td><td>Deleted immediately</td></tr>
+    <tr><td>Ranking records (overall and per-weapon rankings, nickname)</td><td>Deleted immediately</td></tr>
+  </table>
+
+  <h2>4. Data that is kept</h2>
+  <table>
+    <tr><th>Data</th><th>Reason and period</th></tr>
+    <tr><td>Paid purchase records</td><td>Kept for 5 years as required by Korean e-commerce consumer protection law, then deleted</td></tr>
+    <tr><td>Abuse prevention records (history of restrictions)</td><td>Kept to prevent repeated abuse of the service</td></tr>
+  </table>
+  <p>Local saves stored on your device are separate from the server and are removed when you uninstall the app.</p>
+
+  <div class="foot">
+    This guide applies together with the <a href="maze-lure-privacy.html?lang=en">Privacy Policy</a>.<br>
+    Contact: smartmingue@gmail.com
+  </div>
+</div>
+
+<script>
+(function(){
+  var L='';
+  try{L=new URLSearchParams(location.search).get('lang')||'';if(L)localStorage.setItem('ml_lang',L);else L=localStorage.getItem('ml_lang')||'';}catch(e){}
+  if(L!=='ko'&&L!=='en')L=/^ko/i.test(navigator.language||'')?'ko':'en';
+  document.documentElement.lang=L;
+  document.querySelectorAll('.doc').forEach(function(d){d.style.display=d.getAttribute('data-l')===L?'':'none';});
+  document.querySelectorAll('.lang a').forEach(function(a){a.className=a.getAttribute('data-l')===L?'on':'';});
+  document.title=L==='en'?'Account Deletion — Maze Lure':'계정 삭제 안내 — 길치 용사 키우기';
+})();
+</script>
 </body>
 </html>
