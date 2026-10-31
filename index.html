@@ -45,7 +45,7 @@ a{color:inherit;text-decoration:none}
 /* 상단 바 */
 .top{position:sticky;top:0;z-index:20;background:rgba(22,18,28,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;gap:12px;height:56px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700;white-space:nowrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;white-space:nowrap;flex:0 0 auto}
 .brand img{width:32px;height:32px;border-radius:8px}
 .brand span{font-family:'Galmuri11';font-weight:700;color:var(--gold);font-size:15px}
 .menu{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
@@ -221,8 +221,15 @@ footer .cp{margin-left:auto}
  .chips{justify-content:center}
  .tiles{grid-template-columns:repeat(2,1fr)}
 }
-@media (max-width:520px){
+@media (max-width:760px){
  .menu a:not(.codex):not(.lang){display:none}
+}
+@media (max-width:380px){
+ .top .wrap{gap:8px}
+ .brand span{font-size:13px}
+ .menu a{padding:8px 6px;font-size:13px}
+}
+@media (max-width:520px){
  .tiles{grid-template-columns:1fr}
  .tilt{transform:none}
  section.blk{padding:56px 0}
